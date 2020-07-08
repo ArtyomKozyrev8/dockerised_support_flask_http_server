@@ -30,7 +30,7 @@ def y():
     return mes
 
 
-@app.route("zsup")
+@app.route("/zsup")
 def z():
     raise Exception("zsup ... error")
 
