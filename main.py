@@ -6,28 +6,22 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     app.logger.error("root dir")
-    res = jsonify({"result": "main root page"})
-    if res:
-        res = res["result"]
-    return res
+    mes = jsonify({"result": "main root page"})
+    return mes
 
 
 @app.route("/xsup")
 def x():
     app.logger.info("x dir")
-    res = jsonify({"result": "x support page"})
-    if res:
-        res = res["result"]
-    return res
+    mes = jsonify({"result": "x support page"})
+    return mes
 
 
 @app.route("/ysup")
 def y():
     app.logger.error("y dir")
-    res = jsonify({"result": "y support page"})
-    if res:
-        res = res["result"]
-    return res
+    mes = jsonify({"result": "y support page"})
+    return mes
 
 
 if __name__ == '__main__':
