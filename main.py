@@ -30,5 +30,10 @@ def y():
     return mes
 
 
+@app.route("zsup")
+def z():
+    raise Exception("zsup ... error")
+
+
 if __name__ == '__main__':
     app.run("0.0.0.0", debug=False, port=11155)
