@@ -7,6 +7,8 @@ app = Flask(__name__)
 def hello():
     app.logger.error("root dir")
     res = jsonify({"result": "main root page"})
+    if res:
+        res = res["result"]
     return res
 
 
@@ -14,6 +16,8 @@ def hello():
 def x():
     app.logger.info("x dir")
     res = jsonify({"result": "x support page"})
+    if res:
+        res = res["result"]
     return res
 
 
@@ -21,6 +25,8 @@ def x():
 def y():
     app.logger.error("y dir")
     res = jsonify({"result": "y support page"})
+    if res:
+        res = res["result"]
     return res
 
 
