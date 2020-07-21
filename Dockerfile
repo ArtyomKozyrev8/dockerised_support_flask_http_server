@@ -12,3 +12,5 @@ COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
+
+RUN chmod 0755 /usr/src/app/main.py
